@@ -19,10 +19,12 @@ void setup() {
 
   Serial.begin(9600);
 
-   // set up the LCD's number of rows and columns:
+  // set up the LCD's number of rows and columns:
   if (!screen.begin(16, 2)) {
+    //long error message to serial monitor
     Serial.println("couldn't start the screen? check wiring");
-    while(1);
+    while (1)
+      ;
   }
 }
 
@@ -54,7 +56,7 @@ void rollDice(byte numSides) {
   //make a random choice and then print the value
   switch (numSides) {
     case 1:
-      screen.print("Roll is: ");
+      screen.print("Roll is: ");  //shortened these messages for LCD length
       diceRoll = random(1, 4);
       break;
     case 2:
@@ -78,8 +80,10 @@ void rollDice(byte numSides) {
       diceRoll = random(1, 20);
       break;
     default:
+      //long error message to serial monitor
       Serial.println("Issue with mapping potentiometer values");
       break;
   }
+  //display answer on LCD
   screen.println(diceRoll);
 }
