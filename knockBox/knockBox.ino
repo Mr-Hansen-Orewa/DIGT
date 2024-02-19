@@ -29,7 +29,7 @@ void setup() {
 void loop() {
   //ACHIEVED COMMENT
   //is the microphone value bigger than the trigger volume
-  if (analogRead(MICROPIN) > LOUDENOUGH) {
+  if (analogRead(MICROPIN) > LOUDENOUGH) { //0-1023
     Serial.print("Heard a knock, unlocking box");
     digitalWrite(LEDPIN, HIGH);
     latch.write(UNLOCK);
