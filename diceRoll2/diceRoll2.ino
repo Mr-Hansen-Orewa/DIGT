@@ -23,8 +23,7 @@ void setup() {
   if (!screen.begin(16, 2)) {
     //long error message to serial monitor
     Serial.println("couldn't start the screen? check wiring");
-    while (1)
-      ;
+    while(1);
   }
 }
 
