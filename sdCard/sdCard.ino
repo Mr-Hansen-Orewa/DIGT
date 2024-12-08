@@ -1,5 +1,5 @@
 #include <Wire.h>
-#include "SparkFun_Qwiic_OpenLog_Arduino_Library.h"
+#include <SparkFun_Qwiic_OpenLog_Arduino_Library.h>
 
 const String FILENAME = "jokeFile.txt";
 OpenLog sdCard;  //Create an instance of the openlog board
